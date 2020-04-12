@@ -3,10 +3,11 @@ from datetime import datetime, timedelta
 from django.shortcuts import render
 
 # Create your views here.
+from meetings.models import Meeting
 
 
 def welcome(request):
-    return render(request, "website/welcome.html")
+    return render(request, "website/welcome.html", {"message": Meeting.objects.count()})
 
 
 def date(request):
