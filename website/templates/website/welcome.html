@@ -9,9 +9,12 @@
 <h1>Welcome to the meeting planner</h1>
 <p>This is the demo application for the course
     <em>Django: Getting started</em> on <a href="https://www.pluralsight.com"> Pluralsight</a>
-</p><p>
-    There are currently {{ message }} meetings in the database
 </p>
+<h2>Meetings</h2>
+<ul>{% for meeting in message %}
+<li><a href="/meetings/{{ meeting.id }}"> {{ meeting.title }}</a> </li>
+{% endfor %}
+</ul>
 
 </body>
 </html>
