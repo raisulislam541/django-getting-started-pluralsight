@@ -1,13 +1,7 @@
-{%load static%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="{% static 'website/style.css' %}">
+{% extends "base.html" %}
 
-</head>
-<body>
+{% block title %}Welcome{% endblock %}
+{% block content %}
 <h1>Welcome to the meeting planner</h1>
 <p>This is the demo application for the course
     <em>Django: Getting started</em> on <a href="https://www.pluralsight.com"> Pluralsight</a>
@@ -18,6 +12,4 @@
 {% endfor %}
 </ul>
 <a href="{% url 'room' %}">room list</a>
-
-</body>
-</html>
+{% endblock %}

@@ -16,8 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from website.views import welcome, date, about
-from meetings.views import details, room_details
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', welcome, name='welcome'),
