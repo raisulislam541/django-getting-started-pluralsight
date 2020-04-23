@@ -13,7 +13,7 @@ class MeetingForm(ModelForm):
         widgets = {
             'date': DateInput(attrs={"type": "date"}),
             'start': TimeInput(attrs={"type": "time"}),
-            'duration': TextInput(attrs={"type": "number", "min":"1", "max": "4"})
+            'duration': TextInput(attrs={"type": "number", "min": "1", "max": "4"})
 
         }
 
